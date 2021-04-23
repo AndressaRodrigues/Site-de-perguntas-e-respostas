@@ -18,3 +18,6 @@ app.listen(3000, ()=>{
   console.log("App server is running on port 3000");
 });
 
+app.post('/salvarpergunta', (req, res) => {
+    res.send('formulário recebido');
+});
