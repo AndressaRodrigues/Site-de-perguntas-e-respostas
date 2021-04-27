@@ -1,13 +1,24 @@
 const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
+const connection = require('./database/database')
+
+//database
+connection
+    .authenticate()
+    .then(() =>{
+        console.log('FAVELAAAA!!!')
+    })
+    .catch((msgError) =>{
+        console.log(msgErro)
+    })
 
 //chamando o express
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 //Body parser
-app.use(bodyParser.urlencoded({extended: FALSE}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 //rotas
