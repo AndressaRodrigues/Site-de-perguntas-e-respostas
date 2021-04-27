@@ -9,7 +9,7 @@ connection
     .then(() =>{
         console.log('FAVELAAAA!!!')
     })
-    .catch((msgError) =>{
+    .catch((msgErro) =>{
         console.log(msgErro)
     })
 
